@@ -51,6 +51,8 @@ The primary goal is to strengthen practical skills in Python, data analysis, mac
 - Investigate publication and update dates
 - Analyze missing values and missing value percentages
 - Analyze paper version history
+- Analyze title and abstract lengths
+- Explore the most common words in titles and abstracts
 
 ### Visualizations
 
@@ -73,7 +75,7 @@ The primary goal is to strengthen practical skills in Python, data analysis, mac
 - [x] Publication date investigation
 - [x] Paper version analysis
 - [x] Data visualizations
-- [ ] Text analysis
+- [x] Text analysis
 
 ### Phase 2 – NumPy Foundations
 
