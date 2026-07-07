@@ -1,138 +1,117 @@
-# PaperScope (formerly arXiv Research Paper Analyzer)
+# PaperScope
+
+*A research paper metadata analysis project built using the arXiv Metadata Dataset.*
+
+---
 
 ## Overview
 
-PaperScope is a data analysis project built using the arXiv metadata dataset. The project explores research paper metadata through exploratory data analysis (EDA) and will gradually evolve into a full-stack platform for searching, analyzing, visualizing, and recommending research papers.
+PaperScope is a data analysis project that explores research paper metadata from the arXiv Metadata Dataset using Python and the data science ecosystem.
 
-The primary goal is to strengthen practical skills in Python, data analysis, machine learning, backend development, and frontend development while building a real-world portfolio project.
+The project focuses on exploratory data analysis (EDA), feature engineering, feature analysis, and data visualization to better understand publication patterns, research categories, author information, and paper metadata.
+
+This project was built to strengthen practical skills in Python, Pandas, NumPy, Matplotlib, Git, and exploratory data analysis while creating a real-world portfolio project.
 
 ---
 
 ## Dataset
 
-- **Source:** Kaggle - arXiv Metadata Dataset
-- **Current Sample:** 10,000 research papers
+- **Source:** Kaggle – arXiv Metadata Dataset (https://www.kaggle.com/datasets/Cornell-University/arxiv)
 - **Format:** JSON
+- **Sample Size:** 10,000 research papers
 
 ---
 
 ## Tech Stack
 
-### Current
-
 - Python
 - Pandas
+- NumPy
 - Matplotlib
 - Jupyter Notebook
 - Git & GitHub
 
-### Planned
-
-- NumPy
-- Scikit-learn
-- SQLite / PostgreSQL
-- FastAPI
-- Next.js
-- TypeScript
-- Tailwind CSS
-
 ---
 
-## Current Features
+## Project Features
 
 ### Exploratory Data Analysis
 
-- Load and inspect the arXiv dataset
-- Explore the dataset structure
-- Analyze research categories
-- Count unique research categories
-- Identify the top research categories
-- Analyze author information
-- Investigate publication and update dates
-- Analyze missing values and missing value percentages
-- Analyze paper version history
-- Analyze title and abstract lengths
-- Explore the most common words in titles and abstracts
+- Loaded and explored the arXiv metadata dataset
+- Inspected dataset structure and data types
+- Analyzed research categories
+- Identified the most common research categories
+- Analyzed author information
+- Investigated publication and update dates
+- Analyzed missing values and missing value percentages
+- Explored paper version history
+- Analyzed title and abstract text
+- Identified the most common words in titles and abstracts
 
-### Visualizations
+### Feature Engineering
+
+Created additional features for further analysis:
+
+- Abstract length
+- Title length
+- Number of authors
+- Publication year
+- Number of paper versions
+
+### Feature Analysis
+
+- Analyzed distributions of engineered features
+- Investigated relationships between features
+- Performed correlation analysis
+- Explored potential predictive relationships
+
+### Data Visualizations
 
 - Missing value distribution
 - Top research categories
 - Top authors
+- Publication year distribution
 - Paper version distribution
+- Abstract length distribution
+- Number of authors distribution
+- Abstract length vs. paper versions
+- Number of authors vs. paper versions
 
 ---
 
-## Project Roadmap
+## Key Findings
 
-### Phase 1 – Exploratory Data Analysis ✅
-
-- [x] Load dataset
-- [x] Initial exploration
-- [x] Category analysis
-- [x] Author analysis
-- [x] Missing value analysis
-- [x] Publication date investigation
-- [x] Paper version analysis
-- [x] Data visualizations
-- [x] Text analysis
-
-### Phase 2 – NumPy Foundations
-
-- [ ] Learn NumPy arrays
-- [ ] Array operations and broadcasting
-- [ ] Numerical analysis with NumPy
-
-### Phase 3 – Backend
-
-- [ ] Refactor notebook into reusable Python modules
-- [ ] Build a REST API with FastAPI
-
-### Phase 4 – Database & SQL
-
-- [ ] SQL practice using the arXiv dataset
-- [ ] SQLite / PostgreSQL integration
-
-### Phase 5 – Frontend
-
-- [ ] Build a Next.js dashboard
-- [ ] Search research papers
-- [ ] Interactive visualizations
-- [ ] Display analytics
-
-### Phase 6 – Machine Learning
-
-- [ ] Paper recommendation system
-- [ ] Similar paper search
-- [ ] Topic clustering
-- [ ] NLP pipeline
+- Most papers in the sample have only one published version.
+- Paper version counts are highly right-skewed, with only a few papers having many revisions.
+- Most abstracts are between approximately 500 and 1000 characters in length.
+- Abstract length shows almost no linear relationship with the number of paper versions.
+- Number of authors also shows very little linear relationship with paper versions.
+- Since all sampled papers were published in 2007, publication year contains no variance and therefore cannot be used for correlation analysis within this sample.
 
 ---
 
-## Learning Goals
+## Project Summary
 
-This project is being built to strengthen practical skills in:
+This project explored a sample of **10,000 research papers** from the arXiv Metadata Dataset through exploratory data analysis, feature engineering, and visualization.
+
+The analysis identified publication patterns, research category distributions, author statistics, text characteristics, and relationships between engineered features.
+
+While investigating feature relationships, the analysis showed that the engineered features had little linear relationship with the selected target (`num_versions`). This demonstrated the importance of exploratory data analysis in understanding a dataset before applying machine learning techniques.
+
+Overall, the project provided practical experience with real-world data analysis workflows, including data exploration, cleaning, feature engineering, visualization, interpretation, and documenting analytical findings.
+
+---
+
+## Learning Outcomes
+
+Through this project I gained practical experience with:
 
 - Python
 - Pandas
 - NumPy
 - Data Cleaning
-- Exploratory Data Analysis
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- Correlation Analysis
 - Data Visualization
-- SQL
-- REST APIs
-- FastAPI
-- Next.js
-- Machine Learning
 - Git & GitHub
-
----
-
-## Future Vision
-
-PaperScope will evolve into a full-stack application capable of:
-
-- Searching research papers
-- Visualizing research trends
-- Exploring author and category statistics
-- Recommending similar papers using machine learning
